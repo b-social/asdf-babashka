@@ -6,6 +6,10 @@
 
 </div>
 
+Note: this fork of Frederic Merizen's excellent asdf-babashka was created in order to fix an issue on Apple Silicon. Because the [original Github project](https://github.com/fredZen/asdf-babashka) wasn't updated in 2 years, we decided to fix the issue in this fork.
+
+We intend to maintain this fork going forward – if you notice any problems please file an issue.
+
 # Contents
 
 - [Dependencies](#dependencies)
