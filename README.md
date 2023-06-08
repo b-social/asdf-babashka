@@ -1,6 +1,6 @@
 <div align="center">
 
-# asdf-babashka ![Build](https://github.com/fredZen/asdf-babashka/workflows/Build/badge.svg) ![Lint](https://github.com/fredZen/asdf-babashka/workflows/Lint/badge.svg)
+# asdf-babashka ![Build](https://github.com/pitch-io/asdf-babashka/workflows/Build/badge.svg) ![Lint](https://github.com/pitch-io/asdf-babashka/workflows/Lint/badge.svg)
 
 [babashka](https://github.com/borkdude/babashka) plugin for the [asdf version manager](https://asdf-vm.com).
 
@@ -26,7 +26,7 @@ We intend to maintain this fork going forward – if you notice any problems ple
 Plugin:
 
 ```shell
-asdf plugin add babashka https://github.com/fredZen/asdf-babashka.git
+asdf plugin add babashka https://github.com/pitch-io/asdf-babashka.git
 ```
 
 babashka:
@@ -52,7 +52,8 @@ install & manage versions.
 
 Contributions of any kind welcome! See the [contributing guide](contributing.md).
 
-[Thanks goes to these contributors](https://github.com/fredZen/asdf-babashka/graphs/contributors)!
+[Thanks goes to these fredZen contributors](https://github.com/fredZen/asdf-babashka/graphs/contributors)!
+[Thanks to contributors in this repo](https://github.com/pitch-io/asdf-babashka/graphs/contributors)!
 
 # License
 
