@@ -39,14 +39,14 @@ download_release() {
   local static=""
 
   case "$(uname -s)" in
-    Linux*) platform=linux ;;
-    Darwin*) platform=macos ;;
+  Linux*) platform=linux ;;
+  Darwin*) platform=macos ;;
   esac
 
   case "$(uname -m)" in
-    aarch64|arm64) arch=aarch64 ;;
-    x86*) arch=amd64 ;;
-    *) arch=asdf_babashka_unrecognized_arch ;;
+  aarch64 | arm64) arch=aarch64 ;;
+  x86*) arch=amd64 ;;
+  *) arch=asdf_babashka_unrecognized_arch ;;
   esac
 
   if [[ $arch == "aarch64" && $platform == "linux" ]]; then
@@ -79,8 +79,8 @@ install_version() {
     local ext=$(download_release "$version" "$release_file")
 
     case "$ext" in
-      tar.gz) tar -xzf "$release_file.$ext" --directory "$install_path/bin" || fail "Could not extract $release_file.$ext" ;;
-      zip) unzip "$release_file.$ext" -d "$install_path/bin" || fail "Could not extract $release_file.$ext" ;;
+    tar.gz) tar -xzf "$release_file.$ext" --directory "$install_path/bin" || fail "Could not extract $release_file.$ext" ;;
+    zip) unzip "$release_file.$ext" -d "$install_path/bin" || fail "Could not extract $release_file.$ext" ;;
     esac
 
     rm "$release_file.$ext"
