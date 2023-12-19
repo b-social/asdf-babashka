@@ -34,6 +34,9 @@ list_all_versions() {
 download_release() {
   local version="$1"
   local filename="$2"
+  local arch=""
+  local platform=""
+  local static=""
 
   case "$(uname -s)" in
     Linux*) platform=linux ;;
@@ -46,11 +49,15 @@ download_release() {
     *) arch=asdf_babashka_unrecognized_arch ;;
   esac
 
+  if [[ $arch == "aarch64" && $platform == "linux" ]]; then
+    static="-static"
+  fi
+
   echo >&2 "* Downloading babashka release $version..."
 
   local ext url
   for ext in tar.gz zip; do
-    url="$GH_REPO/releases/download/v$version/babashka-$version-$platform-$arch.$ext"
+    url="$GH_REPO/releases/download/v$version/babashka-$version-$platform-$arch$static.$ext"
     curl "${curl_opts[@]}" -o "$filename.$ext" -C - "$url" >&/dev/null && echo $ext && return
   done
 
